@@ -4,11 +4,11 @@ const path = require("path");
 const fs = require('fs');
 
 /* REQUIERO ARCHIVO JSON Y PARSE PARA LEERLO*/
-let listaProductos = JSON.parse(fs.readFileSync('../database/listaProductos.json', 'utf8'));
+let listaProductos = require('../database/listaProductos.json');
 
 const controlador = {
     index: (req, res) => {
-        res.render("index");
+        res.render("index", {productos : listaProductos});
     },
 
     detalleMenu: (req, res) => {
@@ -16,6 +16,5 @@ const controlador = {
     },
 };
 
-console.log(listaProductos);
 
-module.exports = controlador;
+module.exports = controlador;   
