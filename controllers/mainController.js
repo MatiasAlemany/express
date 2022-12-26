@@ -12,7 +12,7 @@ const controlador = {
     },
 
     detalleMenu: (req, res) => {
-        res.render("detalleMenu");
+        res.render("detalleMenu", {productos : listaProductos});
     },
 };
 

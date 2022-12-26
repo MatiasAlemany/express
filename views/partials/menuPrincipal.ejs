@@ -4,9 +4,11 @@
       <br />
 
       <% for (let i=0 ; i < productos.length ; i++) { %>
+        <a href="./detalleMenu.ejs">
         <h4>
             <%= productos[i].nombre %>
         </h4>
+      </a>
       <p class="ps-text-grey">
         <%= productos[i].descripcion %> 
         <%= productos[i].precio %>
