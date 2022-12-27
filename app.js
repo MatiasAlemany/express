@@ -18,9 +18,6 @@ app.use("/", rutaMain);
 
 /* RUTA DETALLE MENU */
 let detalleMenu = require("./routers/rutaDetalleMenu.js");
-app.use("/detalleMenu.ejs", detalleMenu);
+app.use("/", detalleMenu);
 
-/* /* RUTA DETALLE PRODUCTO 
-let detalleProducto = require('./routers/rutaProducto.js')
-app.use('/detalle/:id', detalleProducto) */
 

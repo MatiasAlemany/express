@@ -12,8 +12,15 @@ const controlador = {
     },
 
     detalleMenu: (req, res) => {
-        res.render("detalleMenu", {productos : listaProductos});
+        const { id }  =  req.params; 
+
+        productos = listaProductos.filter((prop) => prop.id == id)
+
+       if (productos.length) return res.render("detalleMenu", {productos : productos});
+       res.send("Not Found");
+       
     },
+   
 };
 
 
